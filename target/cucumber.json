@@ -1,0 +1,87 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-09-07T01:40:31.268Z",
+        "line": 11,
+        "name": "心跳(SC0101)",
+        "description": "",
+        "id": "1001-用户中心-sc;心跳(sc0101);;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1802000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I send a GET request to \"/api/sc/heartbeat\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "/api/sc/heartbeat",
+                  "offset": 25
+                }
+              ],
+              "location": "hellocucumber.LoginStepDefinitions.getRequest(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the response status should be \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "hellocucumber.LoginStepDefinitions.assertStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 527000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the JSON response \"result\" equals \"000000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "result",
+                  "offset": 19
+                },
+                {
+                  "val": "000000",
+                  "offset": 35
+                }
+              ],
+              "location": "hellocucumber.LoginStepDefinitions.assertEquals(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@get"
+          }
+        ]
+      }
+    ],
+    "name": "1001-用户中心-SC",
+    "description": "  1. 登录 2. 校验",
+    "id": "1001-用户中心-sc",
+    "keyword": "Feature",
+    "uri": "classpath:hellocucumber/is_it_friday_yet.feature",
+    "tags": []
+  }
+]
